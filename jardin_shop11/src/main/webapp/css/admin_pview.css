@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+
+section {width:1500px; height:850px; margin:30px auto; margin-left:230px; }
+section p{font-size: 30px; font-weight: bold; margin-bottom: 30px;}
+table {width: 1500px; height: 850px; border-collapse: collapse;}
+table th{width: 200px; text-align: center; border: 2px solid #F2F2F2; background-color: #F2F2F2;}
+table td{border: 2px solid #F2F2F2; padding-left: 5px;}
+#p_space{border-left: none; border-right: none;}
+#nivew_btn{text-align: right; }
+#nivew_btn button{width: 100px; height: 50px; background-color: #666; color: white; border-radius: 10px; cursor: pointer;margin-right: 5px;
+	margin-top: 10px;}

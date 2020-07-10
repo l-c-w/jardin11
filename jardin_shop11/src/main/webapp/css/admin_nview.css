@@ -1,0 +1,19 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+section {width:1500px; height:850px; margin:30px auto; margin-left:230px; }
+section p{font-size: 30px; font-weight: bold; margin-bottom: 30px;}
+#nview{width: 1500px; height: 850px;  }
+
+#nview_table{width: 1200px; border-collapse: collapse; margin:0 auto;}
+#tr01{width: 1200px; font-size: 20px; font-weight: bold; text-align: left;}
+#tr01 td{width: 1200px; font-size: 20px; font-weight: bold; text-align: left; padding-left: 10px; border-top: 2px solid #f2f2f2; line-height: 50px;}
+#tr02{width: 1200px; font-size: 20px; font-weight: bold; text-align: left; border-bottom: 2px solid #F2F2F2;}
+#tr02 td:nth-child(1){font-size:16px; width: 600px; text-align: left; padding-left: 10px; line-height: 50px;border-top: 2px solid #f2f2f2;}
+#tr02 td:nth-child(2){font-size:16px; width: 600px; text-align: right; padding-right: 50px;line-height: 50px;border-top: 2px solid #f2f2f2;}
+#tr03 td{font-size: 14px; padding-left: 10px; line-height: 20px; border: 2px solid #f2f2f2; height: 500px; vertical-align: top; padding-top: 10px;}
+#tr04{width: 1200px; height:50px; font-size: 16px; text-align: left; border-bottom: 2px solid #F2F2F2; cursor: pointer;}
+#tr05{width: 1200px; height:50px; font-size: 16px; text-align: left; border-bottom: 2px solid #F2F2F2; cursor: pointer;}
+#nivew_btn{text-align: right; margin-right: 150px;}
+#nivew_btn button{width: 100px; height: 50px; background-color: #666; color: white; border-radius: 10px; cursor: pointer;margin-right: 5px;
+	margin-top: 10px;}

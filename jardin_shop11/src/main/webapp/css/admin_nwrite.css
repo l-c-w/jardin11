@@ -1,0 +1,29 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 돋움, sans-serif;}
+
+#ew_section {width:1300px; height:850px; margin:30px auto; margin-left:230px;}
+
+#ew_section p{font-size: 30px; font-weight: bold; margin-bottom: 30px;}
+#ew_section .sub_title {display:inline-block; font-size: 16px; font-weight: bold; margin-bottom: 10px; margin-left: 10px;}
+#e_sdatel{float: left;}
+#e_edatel{}
+
+#n_write{width: 1300px;}
+#n_writer{border: none; border-bottom: 2px solid #F2F2F2; margin-left: 10px;}
+#n_writer:focus{outline: none;}
+#n_title{border: none; border-bottom: 2px solid #F2F2F2; width: 500px; margin-left: 10px;}
+#n_title:focus{outline: none;}
+#content_wrap{widows: 1400px; border: 1px solid black;}
+#n_content {width: 1000px; height: 300px; border: none;}
+textarea:focus{outline: none;}
+#n_write_btn{width: 100%; text-align: center;}
+#n_write_btn input{width: 100px; height: 50px; background-color: #666; color: white; border-radius: 10px; cursor: pointer;	margin-top: 10px;}
+
+
+#e_calender{width: 1400px; height:50px; border-bottom: 2px solid #F2F2F2; margin-bottom: 20px; }
+#e_calender input{margin-bottom: 0px;}
+#e_files{width: 1400px; border-bottom: 1px solid #666; margin-top: 10px;}
+
+
+#f_type{width: 100px; outline:none; border: 2px solid #F2F2F2; margin-bottom: 10px; text-align: center; margin-left: 5px;}
+#f_type option {text-align: center;}

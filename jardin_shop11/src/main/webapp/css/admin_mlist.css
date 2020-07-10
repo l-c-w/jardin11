@@ -1,0 +1,344 @@
+/* 
+==================================================================================================
+
+                                                                     기본 설정
+
+==================================================================================================
+*/
+
+
+@charset"utf-8";
+
+html {height:100%;}
+body{margin:0px;padding:0px;height:100%;color:#666;}
+div{margin:0px;padding:0px;color:#666;line-height:160%;font-family:"돋움",verdanafont-size:12px;}
+input,textarea,select,a,p,hr,h1,h2,h3,h4,h5{margin:0px;padding:0px; font-family:"돋움",verdana;font-size:12px;}
+
+html, body, textarea
+{scrollbar-face-color:#e0e0e0;
+scrollbar-highlight-color:cccccc;
+scrollbar-shadow-color:#cccccc;
+scrollbar-3dlight-color:#cccccc;
+scrollbar-arrow-color:#cccccc;
+scrollbar-track-color:#ffffff;
+scrollbar-darkshadow-color:#ffffff;
+scrollbar-base-color:#fe2e2e2;				
+}
+ 
+form{border:currentColor;display:block;}
+fieldset{margin:0px;padding:0px;border:currentColor;}
+
+input{vertical-align:middle;height:20px;line-height:20px;padding-left:20px;border:1px solid #ccc;}
+input[type='text']{padding:1px;border:1px solid #ccc;color:#666;}
+input[type='password']{padding:1px;border:1px solid #ccc;color:#666;}
+input[type='file']{padding:2px 0 2px 5px; border:1px solid #ccc;background-color:#ffffff;color:#666;}
+input[type='checkbox'],input[type~='radio']{margin:-1px 0px; padding:2px; width:15px;height:15px;border:1px solid #ccc;}
+input[type='button'],input[type~='submit'] {padding-top:3px; cursor:pointer;}
+input[type='image']{margin:0px;padding:0px;cursor:pointer;}
+select{padding:0px;vertical-align:middle;line-height:23px;height:23px; padding:2px;border:1px #ccc solid;color:#666;}
+textarea{padding:2px 0 2px 5px; border:1px solid #ccc; font-size:12px;line-height:15px;color:#666;}
+
+input[type='text']:focus{border:1px solid #ed5f00;-webkit-box-shadow;none;box-shadow:;none; outline: 0;}
+input[type='password']:focus{border:1px solid #ed5f00;-webkit-box-shadow;none;box-shadow:;none;}
+input[type='file']:focus{border:1px solid #ed5f00;-webkit-box-shadow;none;box-shadow:;none;}
+textarea:focus{border:1px solid #ed5f00;-webkit-box-shadow;none;box-shadow:;none;}
+select:focus{border:1px solid #ed5f00;-webkit-box-shadow;none;box-shadow:;none;}
+
+strong{margin:0px;padding:0px;font-weight:bold;}
+form{margin:0px;padding:0px;display:inline;}
+img{margin:0px;padding:0px;border:none;vertical-align:middle}
+.absmiddle {vertical-align:middle;}
+caption{width:1px;height:1px;}
+captionspan{margin:0px;padding:0px;overflow:hidden;visibility:hidden;}
+fieldset{margin:0px; padding:0px; border:0px currentColor;}
+table{margin:0px;border-collapse:collapse;/*table-layout:fixed;*/border-spacing:0px;}
+td,th{-ms-word-break:break-all;}
+ul,li {list-style:none;margin:0px;padding:0px; /*overflow:hidden;*/ }
+ol,dl,dd,dt {list-style:none;margin:0px;padding:0px;overflow:hidden;}
+
+a:link,a:visited,a:hover,a:active{color:#666;text-decoration:none;}
+a{color:#666; text-decoration:none;}
+a:focus{color:#e74c3c;}
+.clear{clear:both;}
+.float_l{float:left;}
+.float_r{float:right;}
+.align_c{text-align:center !important;}
+.align_r{text-align:right !important;}
+.align_l{text-align:left !important;}
+.valign_t{vertical-align:top; !important;}
+.valign_m{vertical-align:middle; !important;}
+.valign_b{vertical-align:bottom; !important;}
+
+.strong{font-weight:bold;}
+.f_normal{font-weight:normal!important;}
+.overHid{overflow:hidden !important;}
+.letter_0 {letter-spacing:0 !important;}
+.indent15 {text-indent:-15px; padding-left:15px;}
+
+.Relat {position:relative; width:100%; height:100%; border:1px red solid;}
+.nobg{background:none !important;}
+.noline{border:none !important;}
+.nomargin{margin:0px!important;}
+.dottedlineB{border-bottom:1px dotted #c4c4c4 !important;}
+
+.nopadding{padding:0px!important;}
+.hand{cursor:pointer;}
+.hidden{display:none;}
+.txtC {text-align:center;}
+.automargin{margin:auto !important; }
+.txtunderline{text-decoration:underline;}
+.emptyfield {border:solid #d77b4f 2px !important;}
+.amount {text-align:right; padding-right:5px  !important;}
+.comment {color:#959595;font-size:12px   !important;}
+.comment a{color:#959595;font-size:12px   !important;text-decoration:underline;}
+
+.fontnormal {font-size:12px;color:#666 !important;}
+.fontred {font-weight:bold;color:#ed5f00 !important;}
+.fontblue {font-weight:bold;color:#546da8 !important;}
+.fontredN {font-weight:normal;color:#ed5f00 !important;}
+.fontwhite {font-weight:normal;color:#fff !important;}
+
+
+*{font-family:"돋움",verdana;font-size:12px; font-weight:normal;}
+
+
+/* 
+==================================================================================================
+
+                                                                      리스트 패딩 값
+
+==================================================================================================
+*/
+
+.mt_m10{margin-top:-10px !important;}
+.mt_50{margin-top:50px !important;}
+
+.ml_2{margin-left:2px !important;}
+.ml_5{margin-left:5px !important;}
+.ml_10{margin-left:10px !important;}
+.ml_15{margin-left:15px !important;}
+.ml_20{margin-left:20px !important;}
+.ml_174{margin-left:174px !important;}
+
+.mb_m1{margin-bottom:-1px !important;}
+.mb_2{margin-bottom:2px !important;}
+.mb_3{margin-bottom:3px !important;}
+.mb_5{margin-bottom:5px !important;}
+.mb_m5{margin-bottom:-5px !important;}
+.mb_10{margin-bottom:10px !important;}
+.mb_20{margin-bottom:20px !important;}
+.mb_22{margin-bottom:22px !important;}
+.mb_30{margin-bottom:30px !important;}
+.mb_40{margin-bottom:40px !important;}
+.mb_50{margin-bottom:50px !important;}
+.mb_100{margin-bottom:100px !important;}
+
+.mr_4{margin-right:4px !important;}
+.mr_6{margin-right:6px !important;}
+.mr_10{margin-right:10px !important;}
+.mr_15{margin-right:15px !important;}
+.mr_20{margin-right:20px !important;}
+.mr_40{margin-right:40px !important;}
+
+
+/* hold */
+caption {position:absolute !important; width:0; height:0; line-height:0; overflow:hidden; text-indent:-2000px; left:-500px;}
+
+.NSelect {line-height:20px; height:20px; padding:2px;border:1px #c4c4c4 solid;}
+.NSelect25 {line-height:25px;height:25px; padding:2px;border:1px #c4c4c4 solid;}
+
+
+
+/* 
+****************************************************************************************************
+
+                                                                리스트 설정 detail
+
+****************************************************************************************************
+*/
+
+
+body{}
+body.BgPattern {background:url(../images/bg_pattern.gif) 0 0 repeat;}
+
+h1 {width:199px;float:left; margin:0; padding-top:11px; text-align:left;border:0px #ed5f00 solid;}
+
+
+/* 메뉴얼 셀렉트박스 */
+.table0 {table-layout:fixed;border-collapse:collapse;padding;0px}
+.table0 td{padding:0px;}
+.table0 td a{padding:0px;}
+
+
+/* 
+****************************************************************************************************
+
+                                                                         표 DIV
+
+****************************************************************************************************
+*/
+
+#container {margin-top:98px;border:0px #ed5f00 solid;position:relative; width:100%; min-height:800px;border:0px #ed5f00 solid;}
+
+
+
+/* 
+==================================================================================================
+
+                                                                     서브 DIV
+
+==================================================================================================
+*/
+
+#contentArea {border:0px #ed5f00 solid;display:inline-block; overflow:hidden; min-height:800px;margin-left:250px;margin-top:27px;margin-right:50px; padding-bottom:80px;}
+
+.ptit {width:100%;overflow:hidden;  margin-bottom:33px; border-bottom:1px #e6e6e6 solid;}
+.ptit li{width:100%;line-height:25px;height:25px;float:left; display:inline-block; font-size:14px; font-weight:bold;}
+.ptit li .lmsmanual {background:url(../images/lmsmanual_01.png) 3px no-repeat;background-color:#7b7b7b;line-height:20px;height:20px;width:20px; border:1px #4b4b4b solid;margin-left:2px}
+.ptit li .lmsmanual:hover {background:url(../images/lmsmanual_01_on.png) 3px no-repeat;background-color:#7b7b7b;}
+.ptit li .tit_favorite {background:url(../images/tit_favorite.png) 3px no-repeat;background-color:#7b7b7b;line-height:20px;height:20px;width:20px; border:1px #4b4b4b solid;}
+.ptit li .tit_favorite:hover {background:url(../images/tit_favorite_on.png) 3px no-repeat;background-color:#7b7b7b;}
+.content {margin-bottom:100px;}
+
+.common_sch {width:99.9%;table-layout:fixed;border-top:1px solid #cecece; border-bottom:1px solid #cecece;border-collapse:collapse;}
+.common_sch thead th {padding:8px 10px 8px 10px; text-align:left;border-left:1px #cecece solid;border-right:1px #cecece solid;border-bottom:1px solid #cecece; background:#ebebeb; font-size:12px;font-weight:bold;line-height:25px;}
+.common_sch thead td {padding:8px 10px 8px 10px; text-align:left;border-left:1px #cecece solid;border-right:1px #cecece solid;border-bottom:1px #cecece solid;line-height:25px;}
+.common_sch tbody th {padding:8px 10px 8px 10px; text-align:left;border-left:1px #cecece solid;border-right:1px #cecece solid;background:#ebebeb; font-size:12px; border-bottom:1px #cecece solid;font-weight:bold;line-height:25px;}
+.common_sch tbody td {padding:8px 10px 8px 10px; text-align:left;border-left:1px #cecece solid;border-right:1px #cecece solid;border-bottom:1px #cecece solid;line-height:25px;}
+.common_sch tbody td a:hover {color:#333; text-decoration:underline;}
+.common_sch tbody td .amount{padding-right:5px;}
+.common_sch tbody .bth {padding:10px; border-top:1px solid #cecece; border-bottom:1px solid #cecece; background:#ebebeb; font-size:12px;font-weight:bold;border-right:1px #c9c9c9 solid;border-left:1px #c9c9c9 solid;}
+
+.common_sch_detail{width:99.9%;padding:0px;height:20px}
+.common_sch_detail a div {float:right;padding:0 10px 0 10px;height:20px;line-height:22px;background-color:#ebebeb;font-size:11px;border-right:1px #cecece solid;border-left:1px #cecece solid;border-bottom:1px #cecece solid;}
+
+.list_Toolbar {margin-bottom:10px; overflow:hidden;}
+.list_Toolbar .tit{font-size:13px;font-weight:bold}
+.list_Toolbar img{margin-bottom:2px}
+
+.table_titleCnt{float:left;overflow:hidden;margin-top:10px}
+.table_title{overflow:hidden;height:35px}
+.table_title span{line-height:25px}
+.standardtimeBox{padding:0px 5px 0px 0px;background:#9f9f9f;color:#ffffff;line-height:20px;}
+
+
+.common_list_table {table-layout:fixed;word-break:break-all;border-top:1px solid #7b7b7b; border-bottom:1px solid #7b7b7b;border-collapse:collapse;margin-bottom:10px;}
+.common_list_table thead th {padding:8px 8px 8px 8px; border-bottom:1px solid #cecece; background:#ebebeb; font-size:12px;font-weight:bold;border-right:1px #c9c9c9 solid;border-left:1px #c9c9c9 solid;}
+.common_list_table tbody th {padding:8px 2px 8px 2px; border-top:1px solid #cecece; border-bottom:1px solid #cecece; background:#ebebeb; font-size:12px;font-weight:bold;border-right:1px #c9c9c9 solid;border-left:1px #c9c9c9 solid;}
+.common_list_table tbody td {padding:8px 2px 8px 2px; text-align:center; border-bottom:1px #e1e1e1 solid;border-right:1px #f1f1f1 solid;}
+
+
+.common_list_table tbody td a:hover {color:#333; text-decoration:underline;}
+.common_list_table tbody .amount{text-align:right !important;padding-right:5px !important;}
+.common_list_table tbody .bth {padding:10px; border-top:1px solid #cecece; border-bottom:1px solid #cecece; background:#ebebeb; font-size:12px;font-weight:bold;border-right:1px #c9c9c9 solid;border-left:1px #c9c9c9 solid;}
+
+
+.common_list_table .tdstart {border-left:1px solid #c9c9c9;}
+.common_list_table .tdend {border-right:0px solid;}
+.common_list_table .tdright {border-right:1px solid #c9c9c9;}
+
+.common_list_table1 {table-layout:fixed;border-top:2px solid #7b7b7b; border-bottom:2px solid #7b7b7b;border-collapse:collapse;margin-bottom:10px;}
+.common_list_table1 thead th {padding:8px 2px 8px 2px; border-bottom:1px solid #cecece; background:#ebebeb; font-size:12px;font-weight:bold; border-right:1px #c9c9c9 solid;}
+.common_list_table1 tbody th {padding:8px 2px 8px 2px; text-align:left; background:#f0f0f0; font-size:12px; border-bottom:1px #c9c9c9 solid; border-right:1px #e9e9e9 solid;font-weight:normal;}
+.common_list_table1 tbody td {padding:8px 2px 8px 2px; text-align:center; border-bottom:1px #e1e1e1 solid;border-right:1px #f1f1f1 solid;}
+.common_list_table1 tbody td a:hover {color:#333; text-decoration:underline;}
+.common_list_table1 tbody td .amount{padding-right:5px;}
+.common_list_table1 .tdstart {border-left:1px solid #cecece;}
+.common_list_table1 .tdend {border-right:0px solid;}
+
+.common_list_table_border {table-layout:fixed;border-top:2px solid #7b7b7b; border-bottom:2px solid #7b7b7b;border-collapse:collapse;margin-bottom:10px;}
+.common_list_table_border thead th {border-left:1px solid #cecece;border-right:1px solid #cecece;padding:7px 0 7px 13px;border-bottom:1px solid #cecece; background:#ebebeb; font-size:12px;font-weight:bold;line-height:25px;}
+.common_list_table_border thead td {border-left:1px solid #cecece;border-right:1px solid #cecece;padding:7px 0 7px 13px;border-bottom:1px #ebebeb solid;line-height:25px;}
+.common_list_table_border tbody th {border-left:1px solid #cecece;border-right:1px solid #cecece;padding:7px 0 7px 13px;background:#ebebeb; font-size:12px; border-bottom:1px #c9c9c9 solid;font-weight:bold;line-height:25px;}
+.common_list_table_border tbody td {border-left:1px solid #cecece;border-right:1px solid #cecece;padding:7px 0 7px 13px;border-bottom:1px #ebebeb solid;line-height:25px;}
+.common_list_table_border .leftline {border-left:1px solid #cecece;}
+.common_list_table_border .rightline {border-left:1px solid #cecece;}
+.common_list_table_border .topline {border-top:2px solid #a6a6a6 !important;}
+
+
+
+/* 
+==================================================================================================
+                                                                
+                                                                  관리
+                                                                  
+==================================================================================================
+*/
+
+.common_list_table tbody .gg a:hover {text-decoration:none;cursor: pointer;color:#fff}
+
+
+
+/* 
+****************************************************************************************************
+
+                                                       검색부분의 날짜 지정 
+
+****************************************************************************************************
+*/
+
+
+.btn_CDay {padding:4px;font-size:11px;font-weight:normal;color:#838383 !important;width:100px;text-align:center;background-color:#f6f6f6;border:1px solid #c4c4c4;}
+.btn_CDay:hover {font-weight:normal;color:#ffffff !important;background-color:#606060;border:1px solid #606060;}
+.btn_CDay_on {padding:4px;font-size:11px;width:100px;font-weight:normal;color:#ffffff !important;background-color:#606060;border:1px solid #606060;}
+
+
+/* 
+==================================================================================================
+
+                                                             클릭 버튼                                                                          
+
+==================================================================================================
+*/
+
+
+.gg a{color: #fff;font-size: 1.09em;vertical-align: middle;display:inline-block;height:26px;line-height:26px;border:0;border-radius:3px;padding:0 8px;margin:1px;font-weight:normal}
+
+.b01{background:#3f51b5;}
+.b02{background:#9eacc6;}
+
+
+button {font-family:'돋움',verdana; border:none; cursor:pointer;}
+
+.BtnWhite20 button {display:inline-block;line-height:20px;color:#666;background-color:#fff;border:1px solid #cecece;cursor:pointer;text-align:center;}
+.BtnWhite20 button span {display:inline-block; font-size:13px;text-align:center;}
+.BtnWhite20 button:hover {display:inline-block;line-height:20px;background-color:#efefef;border:1px solid #7b7b7b;text-align:center;}
+.BtnWhite20 button:hover span {display:inline-block; font-size:13px;}
+.BtnWhite20 button span em {list-style:none; display:inline-block; width:13px; height:13px; vertical-align:-3px; font-size:0; margin:0; padding:0; vertical-align:middle;}
+.BtnWhite20 button span em.iexcel {background:url(../images/icon_excel.png) 0 0 no-repeat; padding-left:3px;}
+.BtnWhite20 button span em.iprint {background:url(../images/icon_print.png) 0 0 no-repeat; padding-left:1px;}
+.BtnWhite20 button span em.isms {background:url(../images/icon_sms.png) 0 0 no-repeat; padding-left:4px;}
+.BtnWhite20 button span em.selDel {background:url(../images/icon_selDel.png) 0 1px no-repeat;}
+.BtnWhite20 button span em.Modify {background:url(../images/icon_pen.png) 0 1px no-repeat;}
+.BtnWhite20 button span em.Withdrawal {background:url(../images/icon_Withdrawal.png) 0 1px no-repeat;}
+.BtnWhite20 button span em.Restore {background:url(../images/icon_restore.png) 0 1px no-repeat;}
+.BtnWhite20 button span em.selChk {background:url(../images/icon_selChk.png) 0 1px no-repeat;}
+.BtnWhite20 button span em.CANCELW {background:url(../images/icon_cancelW.png) 0 -1px  no-repeat;padding-right:5px;}
+.BtnWhite20 button span em.selX {background:url(../images/icon_selX.png) 0 1px  no-repeat;}
+
+
+.BtnSch30 button {display:inline-block;padding-left:10px;padding-right:10px;line-height:30px;font-size:13px;background-color:#606060;border:1px solid #515151;cursor:pointer;}
+.BtnSch30 button span {background:url(../images/icon_sch.png) 3px no-repeat;display:inline-block;padding-left:27px;font-size:13px;background-color:#606060;color:#fff;}
+.BtnSch30 button:hover {display:inline-block;padding-right:10px;line-height:30px;font-size:13px; background-color:#8f8f8f;border:1px solid #515151;}
+.BtnSch30 button:hover span {background:url(../images/icon_sch_on.png) 3px no-repeat;display:inline-block; background-color:#8f8f8f;font-size:13px;;color:#fff }
+
+.BtnSchRestore30 button {display:inline-block;padding-left:10px;padding-right:10px;line-height:30px;font-size:13px;background-color:#f1f1f1;border:1px solid #cecece;cursor:pointer;}
+.BtnSchRestore30 button span {background:url(../images/icon_reset30.png) 3px no-repeat;display:inline-block;padding-left:20px;font-size:13px;background-color:#f1f1f1;color:#838383}
+.BtnSchRestore30 button:hover {display:inline-block;padding-right:10px;line-height:30px;font-size:13px; background-color:#f8f8f8;border:1px solid #7b7b7b;}
+.BtnSchRestore30 button:hover span {display:inline-block; background-color:#f8f8f8;font-size:13px;}
+
+
+/* 
+==================================================================================================
+                                                                
+                                                                적립
+                                                                  
+==================================================================================================
+*/
+
+.BoxRed0 {display:inline-block;background-color:#ed5f00;border:1px solid #ed5f00;text-align:center;}
+.BoxRed0 span {display:inline-block;color:#fff;text-align:center;}
+
+
+
+
