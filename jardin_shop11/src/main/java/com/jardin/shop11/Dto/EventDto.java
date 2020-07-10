@@ -18,8 +18,14 @@ public class EventDto {
 		this.end_date = end_date;
 	}
 
-	private String e_code, e_name, e_content, file1, file2;
-	private Date start_date, end_date;
+	private String e_code // 이벤트 코드
+			, e_name // 이벤트 명
+			, e_content// 이벤트 내용
+			, file1 // 썸네일
+			, file2; // 본문 이미지 파일
+
+	private Date start_date // 이벤트 시작일
+			, end_date; // 이벤트 종료일
 
 	public String getE_code() {
 		return e_code;

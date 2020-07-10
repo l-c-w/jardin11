@@ -32,9 +32,24 @@ public class MemberDto {
 
 	}
 
-	private String name, id, pw, email1, email2, mailreceive, post, address1, address2, phone1, phone2, phone3, sms,
-			byear, bmonth, bday, birthtype;
-	private Date birth;
+	private String name, id // 회원 ID
+			, pw // 비밀번호
+			, email1 // 이메일 계정명
+			, email2 // 이메일 도메인
+			, mailreceive // 이메일 수신 동의
+			, post // 우편번호
+			, address1 // 주소
+			, address2 // 상세주소
+			, phone1 // 핸드폰 1
+			, phone2// 핸드폰 2
+			, phone3// 핸드폰 3
+			, sms // sms수신 동의
+			, byear // 생년
+			, bmonth // 생월
+			, bday // 생일
+			, birthtype; // 음,양력
+
+	private Date birth; // 생년월일
 
 	public String getName() {
 		return name;

@@ -17,9 +17,12 @@ public class ReplyDto {
 		this.r_date = r_date;
 	}
 
-	private String e_code, id, r_pw, r_content;
-	private int r_number;
-	private Timestamp r_date;
+	private String e_code // 리플 이벤트 코드
+			, id// 작성자
+			, r_pw // 비밀글 비밀번호
+			, r_content;// 리플 내용
+	private int r_number; // 리플 번호
+	private Timestamp r_date;// 작성일
 
 	public String getE_code() {
 		return e_code;

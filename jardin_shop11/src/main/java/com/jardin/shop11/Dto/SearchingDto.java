@@ -2,12 +2,12 @@ package com.jardin.shop11.Dto;
 
 public class SearchingDto {
 
-	private int curPage = 1;
-	private String e_code;
-	private String option;
-	private String search;
+	private int curPage = 1;// 현재 페이지
+	private String e_code;// 이벤트 코드
+	private String option;// 검색 옵션
+	private String search;// 검색어
 
-	// 이벤트 분기
+	// 이벤트 분기용
 	private String event_type;
 
 	public int getCurPage() {

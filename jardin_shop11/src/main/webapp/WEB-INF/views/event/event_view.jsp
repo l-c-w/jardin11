@@ -28,6 +28,7 @@
 <script type="text/javascript" src="js/respond.min.js"></script>
 <![endif]-->
 <script type="text/javascript">
+//댓글 작성후 위치 고정
 $(window).scroll(function() {
     sessionStorage.scrollTop = $(this).scrollTop();
 });
@@ -86,27 +87,30 @@ $(document).ready(function() {
 			<!-- contents -->
 			<div id="contents">
 				<div id="mypage">
+				<!-- 진행,종료에 따른 출력 분기 -->
 				<c:choose>
 					<c:when test="${r_paging.event_type eq 'event' }">
-					<h2><strong>진행중 이벤트</strong><span>쟈뎅샵의 특별한 혜택이 가득한 이벤트에 참여해 보세요.</span></h2>
+						<h2><strong>진행중 이벤트</strong><span>쟈뎅샵의 특별한 혜택이 가득한 이벤트에 참여해 보세요.</span></h2>
 					</c:when>
-					<c:when test="${r_paging.event_type eq 'fin_event' }">
+						<c:when test="${r_paging.event_type eq 'fin_event' }">
 					<h2><strong>종료된 이벤트</strong><span>쟈뎅샵의 특별한 혜택이 가득했던 이벤트 목록을 확인하실 수 있습니다.</span></h2>
 					</c:when>
-					</c:choose>
+				</c:choose>
 					
 					<div class="viewDivMt">
 						<div class="viewHead">
 							<div class="subject">
 								<ul>
+									<!-- 이벤트 이름 -->
 									<li>${event_view.e_name }</li>
 								</ul>
 							</div>
+							<!-- 이벤트 기간 -->
 							<div class="day">
 								<p class="txt">이벤트 기간<span>${event_view.start_date } ~ ${event_view.end_date }</span></p>
 							</div>
 						</div>
-
+						<!-- 본문 이미지 -->
 						<div class="viewContents">
 							<img src="uploadimages/${event_view.file2 }" alt="내부 이미지" />
 							${event_view.e_content }
@@ -145,24 +149,30 @@ $(document).ready(function() {
 					<div class="replyWrite">
 						<ul>
 							<li class="in" id="save_point">
+							<!-- 댓글 갯수 -->
 								<p class="txt">총 <span class="orange">${reply_count }</span> 개의 댓글이 달려있습니다.</p>
+								<!-- 리플 작성 form -->
 								<form action="reply" method="post" name="reply" id="reply">
-								<input type="hidden" name="e_code" value="${event_view.e_code }">
-								<p class="password">비밀번호&nbsp;&nbsp;<input type="password" class="replynum" name="r_pw" /></p>
-								<textarea class="replyType" name="r_content"></textarea>
+									<input type="hidden" name="e_code" value="${event_view.e_code }">
+									<p class="password">비밀번호&nbsp;&nbsp;<input type="password" class="replynum" name="r_pw" /></p>
+									<textarea class="replyType" name="r_content"></textarea>
 								</form>
 							</li>
 							<li id="input_btn" onclick="reply_write('${event_view.e_code }','${r_paging.event_type }')" style="cursor: pointer;margin-left: 10px;"><a class="replyBtn">등록</a></li>
 						</ul>
 						<p class="ntic">※ 비밀번호를 입력하시면 댓글이 비밀글로 등록 됩니다.</p>
 					</div>
-
+					
+					<!-- 리플 뿌려주기 -->
 					<div class="replyBox">
 						<c:forEach var="replyList" items="${reply_list }" >
 						<ul id="${replyList.r_number }">
+							<!-- 작성자 -->
 							<li class="name">${replyList.id }
+							<!-- 날짜비교 당일이면 시간으로 출력-->
 							<fmt:formatDate var="now_date" value="${now }" pattern="yyyy/MM/dd"/>
 							<fmt:formatDate var="r_date" value="${replyList.r_date }" pattern="yyyy/MM/dd"/>
+							
 							<c:choose>
 							<c:when test="${now_date eq r_date }">
 								<span>[<fmt:formatDate value="${replyList.r_date }" pattern="hh:mm"/>] </span>
@@ -172,10 +182,13 @@ $(document).ready(function() {
 								</c:when>
 							</c:choose>
 							</li>
+							<!-- 본문 출력 -->
 							<li class="txt" ><!-- <textarea class="replyType" style="border: none;"> -->
+								<!-- 비밀글일 시 -->
 								<c:choose> 
 								<c:when test="${not empty replyList.r_pw}">
 								
+								<!-- 작성자 본인 체크 -->
 								<c:choose >
 								<c:when test="${replyList.id eq sessionScope.user_id }">
 								<span class="orange" id="${replyList.r_number }lock">※ 비밀글입니다.</span></a><br>
@@ -188,6 +201,7 @@ $(document).ready(function() {
 								
 								</c:when>
 								
+								<!-- 비밀글이 아닐 시 -->
 								<c:when test="${empty replyList.r_pw}">
 								<div>
 								${replyList.r_content }
@@ -195,8 +209,8 @@ $(document).ready(function() {
 								</c:when>
 								</c:choose>
 								
-							
 							</li>
+							<!-- 수정삭제 버튼 출력 본인일 경우만 표시 -->
 							<c:if test="${sessionScope.user_id eq replyList.id }">
 							<li class="btn" >
 								<a onclick="update('${replyList.r_number }','${replyList.r_content }','${replyList.id }')" style="cursor: pointer;" class="rebtn">수정</a>
@@ -204,6 +218,7 @@ $(document).ready(function() {
 							</li>
 							</c:if>
 						</ul>
+						
 						</c:forEach>
 						
 					</div>
@@ -250,6 +265,7 @@ $(document).ready(function() {
 					<div class="btnArea">
 						<div class="bRight">
 							<ul>
+								<!-- 이벤트 타입에 따라 목록 버튼 다르게 -->
 								<c:choose>
 									<c:when test="${r_paging.event_type eq 'event'}">
 									<li><a href="event" class="sbtnMini mw">목록</a></li>	
@@ -257,7 +273,6 @@ $(document).ready(function() {
 									<c:when test="${r_paging.event_type eq 'fin_event'}">
 									<li><a href="event?event_type=fin_event" class="sbtnMini mw">목록</a></li>	
 									</c:when>
-								
 								</c:choose>
 								
 							</ul>
@@ -300,7 +315,7 @@ $(function(){
 
 //댓글 작성
 function reply_write(e_code,event_type) {
-	
+	//세션체크
 	log_check='<%=session.getAttribute("user_id")%>';
 	
 	alert('${sessionScope.user_id}');
@@ -331,11 +346,14 @@ function reply_write(e_code,event_type) {
 	}	
 }
 
-//댓글 수정창으로 변경
+//댓글창 수정창으로 변경
 function update(r_number,r_content,id) {
+	//바뀔 창 아이디
 	var target = "#"+r_number;
+	//비밀글 여부 체크
 	var lock_ch = "#"+r_number+"lock";
 	var lock = $(lock_ch).text();
+	//수정 버튼 클릭시 다른 글 수정버튼 숨기기, 글작성 등록글 비활성화
 	$(".btn").hide();
 	$("#input_btn").attr('onclick', '').unbind('click');
 	
@@ -344,24 +362,24 @@ function update(r_number,r_content,id) {
 	html= html+'<form action="r_update" method="post" name="r_update">'+
 				'<input type="hidden" value='+r_number+' name="r_number">'+
 				'<li class="name">'+id+'<li class="in">';
-				
-	if (lock.indexOf("비밀글")!==-1) {
 	
+	if (lock.indexOf("비밀글")!==-1) {
 	html= html+'<p class="password" style="display: inline-block;">비밀번호&nbsp;&nbsp;<input type="password" class="replynum" name="r_pw" /></p><span class="ntic">※ 글 작성시 입력한 비밀번호를 입력해주세요.</span>';
 	}
+	
 	html= html+'<textarea class="replyType" name="r_content">'+r_content+'</textarea></li>'+
 		'<li class="btn"><a onclick="update_ok()" style="cursor: pointer;" class="rebtn">확인</a>'+
 		'<a onclick="document.location.reload(true);" style="cursor: pointer;" class="rebtn">취소</a></li></form>';
-
+	//html 변경
 	$(target).html(html);
 }
 
 //댓글 수정 확인
 function update_ok() {
+	//수정내용 담기
 	var r_data = $("form[name=r_update]").serialize();
-	
-var u_check = confirm("댓글을 수정하시겠습니까?");
-	
+	//수정확인 체크
+	var u_check = confirm("댓글을 수정하시겠습니까?");
 	if(!u_check){
 		return;
 	}
@@ -382,24 +400,26 @@ var u_check = confirm("댓글을 수정하시겠습니까?");
 			}
 		},
 		error: function () {
-			alert("실패");
+			alert("수정 실패");
 		}
 		});
 }
 
 //댓글 삭제
 function del(r_number) {
-	
+	//삭제할 창 아이디
 	var target = "#"+r_number;
+	//비밀글 체크
 	var lock_ch = "#"+r_number+"lock";
 	var lock = $(lock_ch).text();
 	
+	//삭제 확인
 	var del_check = confirm("댓글을 삭제하시겠습니까?");
-	
 	if(!del_check){
 		return;
 	}
 	
+	//비밀글일 경우 비밀번호 입력창 띄우기
 	if (lock.indexOf("비밀글")!==-1){
 		var popupWidth = 500;
 		var popupHeight = 300;
