@@ -112,7 +112,7 @@ $(document).ready(function() {
 						</div>
 						<!-- 본문 이미지 -->
 						<div class="viewContents">
-							<img src="uploadimages/${event_view.file2 }" alt="내부 이미지" />
+							<img src="uploadimages/${event_view.file2 }" alt="내부 이미지" style="max-width: 100%; height: auto;" />
 							${event_view.e_content }
 						</div>
 					</div>
@@ -184,7 +184,7 @@ $(document).ready(function() {
 							</li>
 							<!-- 본문 출력 -->
 							<li class="txt" ><!-- <textarea class="replyType" style="border: none;"> -->
-								<!-- 비밀글일 시 -->
+								
 								<c:choose> 
 								<c:when test="${not empty replyList.r_pw}">
 								
@@ -201,7 +201,7 @@ $(document).ready(function() {
 								
 								</c:when>
 								
-								<!-- 비밀글이 아닐 시 -->
+								
 								<c:when test="${empty replyList.r_pw}">
 								<div>
 								${replyList.r_content }

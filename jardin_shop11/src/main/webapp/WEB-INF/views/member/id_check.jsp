@@ -14,7 +14,7 @@
 <div>
 <h2>아이디 중복확인</h2><br>
 	<form action="id_checking">
-	<input type="text" name="check_id" id="check_id">
+	<input type="text" name="check_id" id="check_id" placeholder="아이디를 입력하세요">
 	<button type="button" name="check" onclick="checking(check_id.value)">중복확인</button>
 	</form>
 	<p class="result"></p>

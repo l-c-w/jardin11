@@ -204,7 +204,7 @@ $(document).ready(function() {
 											</li>
 											<li onclick="openDaumZipAddress1()" style="cursor: pointer;"><a class="addressBtn"><span>우편번호 찾기</span></a></li>
 											<li class="pt5"><input type="text" class="addressType" name="address1" id="address1" /></li>
-											<li class="pt5"><input type="text" class="addressType" name="address2" id="address2"/></li>
+											<li class="pt5"><input type="text" class="addressType" name="address2" id="address2" placeholder="상세주소를 입력해주세요"/></li>
 											<li class="cb">
 												<span class="mvalign">※ 상품 배송 시 받으실 주소입니다. 주소를 정확히 적어 주세요.</span>
 											</li>
